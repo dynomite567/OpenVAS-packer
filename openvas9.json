@@ -4,7 +4,7 @@
     },
   "builders": [
     {
-      "name":"virturalbox"
+      "name":"virturalbox",
       "type": "virtualbox-iso",
       "boot_command": [
         "<esc><wait>",
@@ -27,6 +27,7 @@
       "disk_size": 22768,
       "guest_os_type": "Debian_64",
       "headless": false,
+      "output_directory": "builds/{{build_type}}/openvas9-amd64",
       "http_directory": "http",
       "iso_checksum_type": "sha512",
       "iso_checksum_url": "http://cdimage.debian.org/cdimage/archive/8.11.0/amd64/iso-cd/SHA512SUMS",
@@ -46,7 +47,7 @@
       ]
     },
     {
-    "name": "vmware"
+    "name": "vmware",
     "type": "vmware-iso",
       "boot_command": [
         "<esc><wait>",
@@ -69,6 +70,7 @@
       "disk_size": 22768,
       "guest_os_type": "debian-64",
       "headless": false,
+      "output_directory": "builds/{{build_type}}/openvas9-amd64",
       "http_directory": "http",
       "iso_checksum_type": "sha512",
       "iso_checksum_url": "http://cdimage.debian.org/cdimage/archive/8.11.0/amd64/iso-cd/SHA512SUMS",
