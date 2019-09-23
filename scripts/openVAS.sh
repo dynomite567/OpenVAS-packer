@@ -84,7 +84,7 @@ tex-gyre texlive-fonts-recommended texlive-latex-extra texlive-latex-recommended
     echo "Now setting up openVAS databases, please wait..."
     sleep 5
     initsetup
-    openvasmd --user=cyberpatrioths18 --new-password=defcon27
+    openvasmd --user=openvas --new-password=vagrant
     cd ..
     # Add (optional) sync script
     cat > openvas_feedupdate.bash <<EOF
@@ -121,7 +121,7 @@ function initsetup
     openvasmd
     gsad
 
-    openvasmd --create-user=cyberpatrioths18 --role=Admin
+    openvasmd --create-user=openvas --role=Admin
 }
 
 function services

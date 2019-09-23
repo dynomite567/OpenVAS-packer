@@ -9,8 +9,8 @@ apt-get -y clean
 
 # Remove files
 unset HISTFILE
-rm ~/.bash_history /home/cyberpatrioths18/.bash_history
-rm /home/cyberpatrioths18/openvas
+rm ~/.bash_history /home/openvas/.bash_history
+rm /home/openvas/openvas
 
 # sync data to disk (fix packer)
 sync

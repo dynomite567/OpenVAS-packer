@@ -30,11 +30,11 @@
       "iso_checksum_url": "http://cdimage.debian.org/cdimage/archive/8.11.0/amd64/iso-cd/SHA512SUMS",
       "iso_url": "http://cdimage.debian.org/cdimage/archive/8.11.0/amd64/iso-cd/debian-8.11.0-amd64-netinst.iso",
 
-      "ssh_username": "cyberpatrioths18",
-      "ssh_password": "defcon27",
+      "ssh_username": "openvas",
+      "ssh_password": "vagrant",
       "ssh_port": 22,
       "ssh_wait_timeout": "10000s",
-      "shutdown_command": "echo 'cyberpatrioths18'| sudo -S /sbin/shutdown -hP now",
+      "shutdown_command": "echo 'openvas'| sudo -S /sbin/shutdown -hP now",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
       "virtualbox_version_file": ".vbox_version",
       "vm_name": "openvas9-amd64",
@@ -73,11 +73,11 @@
       "iso_checksum_url": "http://cdimage.debian.org/cdimage/archive/8.11.0/amd64/iso-cd/SHA512SUMS",
       "iso_url": "http://cdimage.debian.org/cdimage/archive/8.11.0/amd64/iso-cd/debian-8.11.0-amd64-netinst.iso",
 
-      "ssh_username": "cyberpatrioths18",
-      "ssh_password": "defcon27",
+      "ssh_username": "openvas",
+      "ssh_password": "vagrant",
       "ssh_port": 22,
       "ssh_wait_timeout": "10000s",
-      "shutdown_command": "echo 'cyberpatrioths18'| sudo -S /sbin/shutdown -hP now",
+      "shutdown_command": "echo 'openvas'| sudo -S /sbin/shutdown -hP now",
       "vm_name": "openvas9-amd64",
       "vmx_data": {
         "memsize": "2048",
@@ -114,11 +114,11 @@
       "iso_checksum_url": "http://cdimage.debian.org/cdimage/archive/8.11.0/amd64/iso-cd/SHA512SUMS",
       "iso_url": "http://cdimage.debian.org/cdimage/archive/8.11.0/amd64/iso-cd/debian-8.11.0-amd64-netinst.iso",
 
-      "ssh_username": "cyberpatrioths18",
-      "ssh_password": "defcon27",
+      "ssh_username": "openvas",
+      "ssh_password": "packer",
       "ssh_port": 22,
       "ssh_wait_timeout": "10000s",
-      "shutdown_command": "echo 'cyberpatrioths18'| sudo -S /sbin/shutdown -hP now",
+      "shutdown_command": "echo 'openvas'| sudo -S /sbin/shutdown -hP now",
       "vm_name": "openvas9-amd64",
       "qemuargs": [
         ["-m", "4096"],
@@ -130,7 +130,7 @@
   "provisioners": [
     {
       "type": "shell",
-      "execute_command": "echo 'cyberpatrioths18' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
+      "execute_command": "echo 'openvas' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
       "scripts": [
         "scripts/update.sh",
         "scripts/sshd.sh",
@@ -140,7 +140,7 @@
     },
     {
       "type": "shell",
-      "execute_command": "echo 'cyberpatrioths18' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
+      "execute_command": "echo 'openvas' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
       "scripts": [
         "scripts/vbaddguest.sh"
       ],
@@ -148,13 +148,13 @@
     },
     {
       "type": "shell",
-      "execute_command": "echo 'cyberpatrioths18' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
+      "execute_command": "echo 'openvas' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
       "scripts": "scripts/vmware-guest.sh",
       "only": ["vmware"]
     },
     {
       "type": "shell",
-      "execute_command": "echo 'cyberpatrioths18' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
+      "execute_command": "echo 'openvas' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
       "scripts": "scripts/cleanup.sh"
     }
   ]
